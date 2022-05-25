@@ -1,11 +1,11 @@
 import Link from "next/link";
 
-const Navbar = () => {
+const Navbar = ({ cart }) => {
   return (
     <header className="text-gray-400 bg-yellow-400 body-font">
       <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
         <Link href="/">
-          <a className="flex title-font font-medium items-center text-red-400 mb-4 md:mb-0">
+          <a className="flex title-font font-medium items-center text-black mb-4 md:mb-0">
             {/* react icon  */}
             <span className="ml-3 text-xl">SunShine Chemical</span>
           </a>
@@ -22,6 +22,9 @@ const Navbar = () => {
           </Link>
           <Link href="/contact">
             <a className="mr-5 hover:text-red-700">Contact US</a>
+          </Link>
+          <Link href="/checkout">
+            <a className="mr-5 hover:text-red-700">Cart({cart.length})</a>
           </Link>
         </nav>
         <div className="m-3 my-4">

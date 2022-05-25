@@ -4,11 +4,11 @@ import Link from "next/link";
 function products(props) {
   return (
     <div className="container mx-auto px-4">
-      <section className="text-gray-400 body-font bg-gray-900">
+      <section className="text-black body-font">
         <div className="container px-5 md:py-24 mx-auto">
           <div className="flex flex-wrap w-full md:mb-20">
             <div className="lg:w-1/2 w-full mb-6 lg:mb-0">
-              <h1 className="sm:text-3xl text-2xl font-medium title-font mb-2 text-white">
+              <h1 className="sm:text-3xl text-red-700 text-2xl font-medium title-font mb-2">
                 SunShine Chemical
               </h1>
               <div className="h-1 w-20 bg-red-500 rounded"></div>
@@ -17,8 +17,11 @@ function products(props) {
           <div className="flex flex-wrap -m-4">
             {props.products.data.map((item) => {
               return (
-                <div className="xl:w-1/4 md:w-1/2 p-4">
-                  <div className="bg-gray-800 bg-opacity-40 p-6 rounded-lg">
+                <div
+                  key={item.attributes.slug}
+                  className="xl:w-1/4 md:w-1/2 p-4"
+                >
+                  <div className="bg-yellow-300 bg-opacity-40 p-6 rounded-lg">
                     <img
                       className="h-96 rounded m-auto mb-8"
                       src={
@@ -34,7 +37,8 @@ function products(props) {
                       {item.attributes.title}
                     </h2>
                     {/* colors  */}
-                    <div className="hidden bg-red-500 bg-purple-500 bg-green-500"></div>
+                    {/* ye khud ke h  */}
+                    <div className="hidden lg:bg-red-500 md:bg-purple-500 sm:bg-green-500 "></div>
                     <button
                       className={
                         "border-2 border-gray-800 ml-1 rounded-full w-6 h-6 focus:outline-none" +
@@ -61,6 +65,7 @@ function products(props) {
   );
 }
 
+// sever side props
 export async function getServerSideProps(context) {
   // token
   let headers = {
@@ -76,7 +81,7 @@ export async function getServerSideProps(context) {
   let products = await a.json();
   console.log(products);
   return {
-    props: {}, // will be passed to the page component as props
+    props: { products: products }, // will be passed to the page component as props
   };
 }
 
