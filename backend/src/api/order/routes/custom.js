@@ -2,10 +2,18 @@
 
 module.exports = {
   routes: [
+    // POSt method kre ge payment ke lye
+    // for pre
     {
-      method: "GET",
+      method: "POST",
       path: "/orders/pretransaction",
-      handler: "custom.exampleAction",
+      handler: "custom.pre",
+    },
+    // for post
+    {
+      method: "POST",
+      path: "/orders/posttransaction",
+      handler: "custom.post",
     },
   ],
 };
