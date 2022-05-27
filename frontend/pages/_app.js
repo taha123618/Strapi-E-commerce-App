@@ -2,8 +2,16 @@ import { useState, useEffect } from "react";
 import "../styles/globals.css";
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
+import Head from "next/head";
 
 function MyApp({ Component, pageProps }) {
+  <Head>
+    {/* payment js checkout meta tag  */}
+    <meta
+      name="viewport"
+      content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0"
+    />
+  </Head>;
   useEffect(() => {
     console.log("I am useeffect from _app.js");
   }, []);
