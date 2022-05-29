@@ -2,7 +2,7 @@ import { useState } from "react";
 const contact = () => {
   return (
     <>
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 min-h-screen">
         <section className="text-black body-font relative">
           <div className="container px-5 py-24 mx-auto">
             <div className="flex flex-col text-center w-full mb-12">

@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
 import "../styles/globals.css";
-import Navbar from "../Components/Navbar";
+import Navbar from "../Components/NavbarItems/Navbar";
 import Footer from "../Components/Footer";
 import Head from "next/head";
+// import Nav1 from "../Components/NavbarItems/Nav1";
 
 function MyApp({ Component, pageProps }) {
   <Head>
@@ -13,7 +14,7 @@ function MyApp({ Component, pageProps }) {
     />
   </Head>;
   useEffect(() => {
-    console.log("I am useeffect from _app.js");
+    console.log("I am useEffect from _app.js");
   }, []);
   const [cart, setCart] = useState([]);
   const [reloadKey, setReloadKey] = useState(1);
