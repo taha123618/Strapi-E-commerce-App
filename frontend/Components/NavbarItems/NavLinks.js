@@ -39,16 +39,14 @@ const NavLinks = () => {
                     mt-1 bg-white rotate-45"
                     ></div>
                   </div>
-                  <div className="bg-white border-2 p-5 grid grid-cols-3 gap-10">
+                  <div className="bg-secondary border-4 p-5 grid grid-cols-3 gap-10">
                     {link.sublinks.map((mysublinks) => (
                       <div>
-                        <h1 className="text-lg font-semibold">
-                          {mysublinks.Head}
-                        </h1>
+                        <h1 className="text-lg font-bold">{mysublinks.Head}</h1>
                         {mysublinks.sublink.map((slink) => (
-                          <li className="text-sm text-black my-2.5">
+                          <li className="text-base text-primary my-2.5">
                             <Link href={slink.link}>
-                              <a className="hover:text-primary text-black">
+                              <a className="hover:text-primary text-LIGHT_PINK">
                                 {slink.name}
                               </a>
                             </Link>

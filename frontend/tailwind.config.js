@@ -7,7 +7,8 @@ module.exports = {
     extend: {
       // colores
       colors: {
-        primary: "#4A3",
+        primary: "#84BE49",
+        secondary: "#F1A724",
         LIGHT_PINK: "#F79D9D",
       },
     },

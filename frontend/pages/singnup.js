@@ -21,11 +21,7 @@ const singnup = () => {
           // poster="../public/images/bg.jpg"
         ></video> */}
       </div>
-      <div
-        hidden
-        role="hidden"
-        className="fixed inset-0 w-6/12 ml-auto bg-white bg-opacity-70 backdrop-blur-xl lg:block"
-      ></div>
+      <div hidden role="hidden" className="fixed inset-0 w-6/12 ml-auto"></div>
       <div className="relative h-full ml-auto lg:w-6/12">
         <div className="m-auto py-12 px-6 sm:p-20 xl:w-10/12">
           <div className="space-y-4">
@@ -43,23 +39,23 @@ const singnup = () => {
             </Link>
             <p className="font-bold text-lg text-black">
               Welcome to SunShine Chemicals
-              <span className="text-primary text-2xl font-bold mx-1">
-                || Login Please
+              <span className="text-secondary text-2xl font-bold mx-1">
+                || SignUp Please
               </span>
             </p>
           </div>
 
+          {/* google  */}
           <div className="mt-12 grid gap-6 sm:grid-cols-2">
             <button className="h-12 px-6 border border-blue-100 rounded bg-red-300 hover:bg-red-400 focus:bg-blue-100 active:bg-blue-200">
               <div className="flex items-center space-x-4 justify-center">
-                <img src="images/google.svg" className="w-5" alt="" />
+                <img src="#" className="w-5" alt="" />
                 <span className="block w-max font-medium tracking-wide text-sm text-blue-700">
                   with Google
                 </span>
               </div>
             </button>
-
-            {/* google  */}
+            {/* github  */}
             <button className="h-12 px-6 rounded bg-gray-800 transition hover:bg-gray-800 active:bg-gray-600 focus:bg-gray-700">
               <div className="flex space-x-4 items-center justify-center text-white">
                 <svg
@@ -78,7 +74,7 @@ const singnup = () => {
           </div>
 
           <div role="hidden" className="mt-12 border-t">
-            <span className="block w-max mx-auto -mt-3 px-4 text-center text-gray-500 bg-white">
+            <span className="block w-max mx-auto -mt-3 px-4 text-center text-primary">
               Or
             </span>
           </div>
@@ -88,7 +84,7 @@ const singnup = () => {
               <input
                 type="email"
                 placeholder="Email"
-                className="w-full py-3 px-6 ring-1 ring-gray-300 rounded-lg placeholder-gray-600 bg-transparent transition disabled:ring-gray-200 disabled:bg-gray-100 disabled:placeholder-gray-400 invalid:ring-red-400 focus:invalid:outline-none"
+                className="w-full py-3 px-6 ring-1 ring-black rounded-lg placeholder-gray-600 bg-transparent transition disabled:ring-gray-200 disabled:bg-gray-100 disabled:placeholder-gray-400 invalid:ring-red-400 focus:invalid:outline-none"
               />
             </div>
 
@@ -96,19 +92,19 @@ const singnup = () => {
               <input
                 type="password"
                 placeholder="Password"
-                className="w-full py-3 px-6 ring-1 ring-gray-300 rounded-lg placeholder-gray-600 bg-transparent transition disabled:ring-gray-200 disabled:bg-gray-100 disabled:placeholder-gray-400 invalid:ring-red-400 focus:invalid:outline-none"
+                className="w-full py-3 px-6 ring-1 ring-black rounded-lg placeholder-gray-600 bg-transparent transition disabled:ring-gray-200 disabled:bg-gray-100 disabled:placeholder-gray-400 invalid:ring-red-400 focus:invalid:outline-none"
               />
               <br />
               <input
                 type="password"
                 placeholder="Confirm Password"
-                className="w-full py-3 px-6 ring-1 ring-gray-300 rounded-lg placeholder-gray-600 bg-transparent transition disabled:ring-gray-200 disabled:bg-gray-100 disabled:placeholder-gray-400 invalid:ring-red-400 focus:invalid:outline-none"
+                className="w-full py-3 px-6 ring-1 ring-black rounded-lg placeholder-gray-600 bg-transparent transition disabled:ring-gray-200 disabled:bg-gray-100 disabled:placeholder-gray-400 invalid:ring-red-400 focus:invalid:outline-none"
               />
             </div>
 
             <div>
               {/* signup  */}
-              <button className="w-full px-6 py-3 rounded-lg bg-primary transition hover:bg-green-500 focus:bg-green-400 active:bg-green-600">
+              <button className="w-full px-6 py-3 rounded-lg bg-primary transition hover:bg-green-500 focus:bg-green-300 active:bg-green-600">
                 <span className="font-semibold text-white text-lg">SignUp</span>
               </button>
             </div>

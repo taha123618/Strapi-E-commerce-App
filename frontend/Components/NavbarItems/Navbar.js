@@ -11,15 +11,15 @@ const Navbar = ({ cart }) => {
         <Link href="/">
           <a className="flex title-font font-medium items-center text-black mb-4 md:mb-0">
             {/* react icon  */}
-            {/* <Image
+            <Image
               src={Images.logo}
+              width={100}
+              height={100}
+              // className="mr-1"
               alt="logo"
-              // width={500}
-              // height={500}
-              className="md:cursor-pointer h-9"
               priority
-            /> */}
-            <span className="ml-3 text-xl">SunShine Chemical</span>
+            />
+            {/* <span className="ml-3 text-xl">SunShine Chemical</span> */}
           </a>
         </Link>
         <nav className="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
@@ -30,7 +30,7 @@ const Navbar = ({ cart }) => {
             <a className="mr-5 hover:text-primary">About</a>
           </Link>
           <Link href="/products">
-            <a className="mr-5 hover:text-primary">New Products</a>
+            <a className="mr-5 hover:text-primary">Products</a>
           </Link>
           <Link href="/contact">
             <a className="mr-5 hover:text-primary">Contact US</a>
@@ -42,7 +42,7 @@ const Navbar = ({ cart }) => {
         </nav>
         <div className="m-3 my-4">
           <Link href="/login">
-            <button className="bg-primary text-black  px-6 py-2 rounded-full">
+            <button className="bg-primary text-white  px-6 py-2 rounded-full">
               Login
             </button>
           </Link>
