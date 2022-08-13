@@ -25,7 +25,7 @@ const checkout = ({ cart }) => {
     console.log({ ...form, [e.target.name]: e.target.value });
   };
 
-  // for handle the payment form by Pytem
+  // for handle the payment form by india payment
   const submit = async () => {
     let orderId = "OID" + Math.floor(1000000 * Math.random());
     let url = `${process.env.NEXT_PUBLIC_STRAPI_URL} + "/api/orders/pretransaction`;
