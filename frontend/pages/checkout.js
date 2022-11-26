@@ -22,7 +22,6 @@ const checkout = ({ cart }) => {
   // for form data hold
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
-    console.log({ ...form, [e.target.name]: e.target.value });
   };
 
   // for handle the payment form by india payment
@@ -49,11 +48,7 @@ const checkout = ({ cart }) => {
         amount: subtotal /* update amount */,
       },
       handler: {
-        notifyMerchant: function (eventName, data) {
-          console.log("notifyMerchant handler function called");
-          console.log("eventName => ", eventName);
-          console.log("data => ", data);
-        },
+        notifyMerchant: function (eventName, data) {},
       },
     };
 
@@ -65,7 +60,7 @@ const checkout = ({ cart }) => {
           window.Paytm.CheckoutJS.invoke();
         })
         .catch(function onError(error) {
-          console.log("error => ", error);
+          alert(error);
         });
     }
   };

@@ -13,11 +13,21 @@ function MyApp({ Component, pageProps }) {
       content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0"
     />
   </Head>;
-  useEffect(() => {
-    console.log("I am useEffect from _app.js");
-  }, []);
   const [cart, setCart] = useState([]);
+  // for local storage
+  // const [cart, setCart] = useState(() => getLocalCartData());
   const [reloadKey, setReloadKey] = useState(1);
+
+  // for local Storage
+  const getLocalCartData = () => {
+    let newCartData = localStorage.getItem("LocalStorage");
+    if (newCartData === []) {
+      return [];
+    } else {
+      return JSON.parse(newCartData);
+    }
+  };
+
   // card state
   const addCart = (item, qty, price) => {
     let newCart = cart;
@@ -36,6 +46,12 @@ function MyApp({ Component, pageProps }) {
   const clearCart = (item) => {
     setCart([]);
   };
+
+  // for adding in to localStorage
+  // only two methods get or set
+  useEffect(() => {
+    localStorage.setItem("LocalStorage", JSON.stringify(cart));
+  }, [cart]);
 
   return (
     <>

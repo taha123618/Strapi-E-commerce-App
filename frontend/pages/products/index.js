@@ -79,7 +79,6 @@ export async function getServerSideProps(context) {
     { headers: headers }
   );
   let products = await a.json();
-  console.log(products);
   return {
     props: { products: products }, // will be passed to the page component as props
   };
